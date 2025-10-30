@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.pyd
+*.pyo
+*.dll
+*.dylib
+build/
+dist/
+*.egg-info/
+.eggs/
+.python-version
+.venv/
+venv/
+.env
+
+
+# Jupyter / Colab
+.ipynb_checkpoints/
+*.nbconvert.ipynb
+
+
+# Tools / Caches
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.cache/
+
+
+# OS
+.DS_Store
+Thumbs.db
+
+
+# MkDocs (when created later)
+site/
+docs/site/
