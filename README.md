@@ -8,4 +8,27 @@ na aba tarefas.
 
 Referência sobre FOPT: https://arxiv.org/abs/2305.02357. 
 
+**Objetivo.** Reproduzir e extender os resultados chaves de *Alvarez‑Llamoza & Cosenza (2014)*, focando em **contornos sincronizados**, **ordem de fase antes da sincronização**, e **persistência**. Depois construir **ligações** como ondas gravitacionais (GW) geradas por transições de fase de primeira ordem (FOPTs).
 
+
+> Main paper: **Synchronization and phase ordering in globally coupled chaotic maps** (2014).
+
+
+## TL;DR — Quickstart
+
+
+**Colab (recommended):** click the badge above. All notebooks live under `notebooks/`.
+
+
+**Local install** (Python ≥ 3.11):
+```bash
+# clone
+git clone https://github.com/<GITHUB_USER>/<REPO_NAME>.git
+cd <REPO_NAME>
+
+
+# create env (uv or pip)
+python -m venv .venv && source .venv/bin/activate # Windows: .venv\\Scripts\\activate
+pip install -U pip
+pip install -e .[dev]
+```
