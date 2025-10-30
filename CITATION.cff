@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: If you use this software, please cite it as below.
+title: Chaos–FOPT: Synchronization & Phase Ordering in Globally Coupled Maps
+authors:
+    - family-names: Stellet
+    given-names: Igor
+version: 0.1.0
+license: MIT
+date-released: 2025-11-25
+repository-code: https://github.com/IgorStellet/Projeto_Final_Python_na_Fisica.git
