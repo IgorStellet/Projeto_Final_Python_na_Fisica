@@ -23,8 +23,8 @@ Referência sobre FOPT: https://arxiv.org/abs/2305.02357.
 **Local install** (Python ≥ 3.11):
 ```bash
 # clone
-git clone https://github.com/<GITHUB_USER>/<REPO_NAME>.git
-cd <REPO_NAME>
+git clone https://github.com/IgorStellet/Projeto_Final_Python_na_Fisica.git
+cd Projeto_Final_Python_na_Fisica
 
 
 # create env (uv or pip)
