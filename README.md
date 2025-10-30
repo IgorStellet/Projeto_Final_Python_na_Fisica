@@ -1,34 +1,27 @@
-# Projeto Final (Python na Física: Caos)
-O projeto final da disciplina, python na Física, consiste em fazermos uma simulação envolvendo sua área de pesquisa e teoria do caos.
+# Projeto Final — Python na Física (Caos + FOPT → GWs)
 
-Durante o curos fizemos ao todo 5 tarefas envolvendo física estatística, do passeio aleatório ao modelo de ising e teoria dos jogos. Todas essas tarefas se encontraram aqui
-na aba tarefas.
+[![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/IgorStellet/Projeto_Final_Python_na_Fisica/blob/main/notebooks/00_model_check.ipynb)
 
-**Projeto final:** Sendo minha área de pesquisa first order phase transitions (FOPT's) que geram ondas gravitacionais (GW's), esse projeto terá como foco vizualizar o caos surgindo a partir de transições descontínuas, com as referências principais sendo: https://arxiv.org/abs/1402.4870 e secundariamente https://arxiv.org/abs/cond-mat/0402283.
+**Ideia geral.** Projeto final da disciplina “Python na Física” (CBPF): explorar **teoria do caos** em **mapas caóticos 
+globalmente acoplados** e construir uma ponte conceitual com **ondas gravitacionais (GWs)** geradas por **transições de fase de primeira ordem (FOPTs)**. 
+O objetivo desse projeto é conectar sua área de pesquisa, no meu caso FOPTs, com teoria do caos.
+Ao longo da disciplina foram feitos 5 tarefas associando física estatística a python, desde o passeio aleatório ao modelo 
+de ising e teoria dos jogos. Coloco também essas tarefas aqui nesse repositório.
 
-Referência sobre FOPT: https://arxiv.org/abs/2305.02357. 
+**Artigo principal:** *Synchronization and phase ordering in globally coupled chaotic maps* (Alvarez-Llamoza & Cosenza, 2014).  
+**Artigo de apoio:** *First-order Synchronization Transition in Locally Coupled Maps* (Mohanty, 2004).
 
-**Objetivo.** Reproduzir e extender os resultados chaves de *Alvarez‑Llamoza & Cosenza (2014)*, focando em **contornos sincronizados**, **ordem de fase antes da sincronização**, e **persistência**. Depois construir **ligações** como ondas gravitacionais (GW) geradas por transições de fase de primeira ordem (FOPTs).
+## Objetivos do projeto
+- Reproduzir e comentar as **fronteiras de sincronização** (Fig. 1), **persistência** e **ordem de fase antes da sincronização completa** (Figs. 2–3),
+e **distribuições/séries temporais** (Figs. 4–5).
+- Conectar os resultados com FOPT→GWs (colisões de paredes, ondas sonoras, sensibilidade às condições iniciais).
 
-
-> Main paper: **Synchronization and phase ordering in globally coupled chaotic maps** (2014).
-
-
-## TL;DR — Quickstart
-
-
-**Colab (recommended):** click the badge above. All notebooks live under `notebooks/`.
-
-
-**Local install** (Python ≥ 3.11):
+## Instalação rápida (local)
+Requer **Python ≥ 3.11**.
 ```bash
-# clone
 git clone https://github.com/IgorStellet/Projeto_Final_Python_na_Fisica.git
 cd Projeto_Final_Python_na_Fisica
-
-
-# create env (uv or pip)
-python -m venv .venv && source .venv/bin/activate # Windows: .venv\\Scripts\\activate
+python -m venv .venv && source .venv/bin/activate  # Windows: .venv\Scripts\activate
 pip install -U pip
 pip install -e .[dev]
 ```

@@ -10,31 +10,24 @@ build/
 dist/
 *.egg-info/
 .eggs/
-.python-version
 .venv/
 venv/
 .env
-
+.python-version
 
 # Jupyter / Colab
 .ipynb_checkpoints/
 *.nbconvert.ipynb
 
-
-# Tools / Caches
-.mypy_cache/
+# Test / Coverage
 .pytest_cache/
-.ruff_cache/
 .coverage
 htmlcov/
-.cache/
-
 
 # OS
 .DS_Store
 Thumbs.db
 
-
-# MkDocs (when created later)
+# MkDocs (se usar depois)
 site/
 docs/site/
