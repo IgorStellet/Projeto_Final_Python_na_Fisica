@@ -1,7 +1,5 @@
 # Projeto Final — Python na Física (Caos + FOPT → GWs)
 
-[![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/IgorStellet/Projeto_Final_Python_na_Fisica/blob/main/notebooks/00_model_check.ipynb)
-
 **Ideia geral.** Projeto final da disciplina “Python na Física” (CBPF): explorar **teoria do caos** em **mapas caóticos 
 globalmente acoplados** e construir uma ponte conceitual com **ondas gravitacionais (GWs)** geradas por **transições de fase de primeira ordem (FOPTs)**. 
 O objetivo desse projeto é conectar sua área de pesquisa, no meu caso FOPTs, com teoria do caos.
