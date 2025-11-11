@@ -12,11 +12,11 @@
 
 ## 1. Interação Global
 
-Diferente do Ising local (troca de spin afetada apenas pelos primeiros vizinhos), na intereção global todo mundo é afetado por todos os outros.
+Diferente do Ising local (troca de spin afetada apenas pelos primeiros vizinhos), na interação global todo mundo é afetado por todos os outros.
 
 
 Pense como analogia o seguinte: No modelo de ising cada pessoa tem sua opinião baseada na opinião de seus vizinhos, enquanto na
-intereção global todos **escutam o mesmo "noticiário"** e tomam suas opiniões baseadas nele:um **campo médio global**. 
+interação global todos **escutam o mesmo "noticiário"** e tomam suas opiniões baseadas nele:um **campo médio global**. 
 Queremos ver como isso altera:
 
 * **Sincronização** (todo mundo exibindo a mesma “opinião/imagem” ao mesmo tempo),
@@ -53,7 +53,7 @@ Em redes **locais**, a ordenação de fase lembra Ising: **domínios** crescem p
 Em acoplamento **global**, não há vizinhança: a ordenação (ou a falta dela) vem de uma **pressão do campo médio**. 
 Isso muda tudo: **persistência satura**, transições podem ficar **descontínuas**, e a sincronização pode acontecer **com** ou **sem** ordenação.
 
-O que isso significa: Todos podem seguir a mesma alternancia de canais, mesmo sem ficar em apenas um deles.
+O que isso significa: Todos podem seguir a mesma alternância de canais, mesmo sem ficar em apenas um deles.
 
 ### Metáfora vizinhos × mídia
 
@@ -121,7 +121,7 @@ Definimos $\mathbf{x}^{t}=(x_1^t,\dots,x_N^t)$ e $\mathbf{M}$ a matriz de uns. E
 $$\mathbf{x}^{t+1}=\big[(1-\varepsilon)\mathbf{I}+\tfrac{\varepsilon}{N}\mathbf{M}\big] f(\mathbf{x}^t)$$
 
 A matriz $\mathbf{M}$ tem dois autovalores: **$m_k$=N** (modo **homogêneo**) e **0** (degenerado (N-1) vezes, modos **transversos**), pois
-todos eles são perpendiculares ao modo homonêneo $m_k=N$.
+todos eles são perpendiculares ao modo homogêneo $m_k=N$.
 
 **Definição de estado sincronizado**: $x_i^t=x_j^t;\forall i,j$. 
 O modo homogêneo descreve a **trajetória comum**; os transversos medem **descolamentos entre casas**.
@@ -144,8 +144,9 @@ Para o nosso mapa por partes, $f'\equiv\pm\mu$ quase sempre no atrator, então *
 $$\boxed{(1-\varepsilon)|\mu|<1}.$$
 
 **Dinâmica ao longo do modo homogêneo** m=(N) não muda com $\varepsilon$ porque $(1-\varepsilon)+\varepsilon=1$ ⇒ sobre a variedade sincronizada todos seguem 
-**o mesmo mapa local**, temos que respeitar a condição $e^{\lambda}<1$: Se $|\mu|\le 1$ é **fixo estável**; se $|\mu|>1$ é **caótico**. 
-Por isso a reta $|\mu|=1$ **separa sincronização estacionária da caótica**.
+**o mesmo mapa local**. No mapa homogêneo, a dinâmica não depende de $\varepsilon$. Assim se $|\mu|\le 1$ temos sincronização estacionária;
+para $|\mu| > 1$ podemos ter sincronização caótica. Desse modo a reta $|\mu|=1$ **separa sincronização estacionária da caótica**
+(Estabelecido pelo modo homogêno), enquanto os modos transversos vão separar a sincronia da não-sincronia.
 
 > **Leitura física**: o termo $(1-\varepsilon)$ amortece diferenças entre casas. 
 > Se o ganho local $|\mu|$ expande muito, precisamos de **$\varepsilon$ maior** para “colar” a imagem em todas as telas.
@@ -211,37 +212,28 @@ Tomando log‑média no tempo: $\langle\ln|\delta x_{t+1}|-\ln|\delta x_t|\rangl
 3. **Escape**: pedir que $f([-1,1])\subseteq[-1,1]$ sob o fator $(1-\varepsilon)$ dá $|(1-\varepsilon)\mu|<3$. As igualdades definem as **bordas**.
 
 ---
-[Parei aqui]
 
+## 7. Intuições finas 
 
-## 7. Intuições finas (com TV e com física)
-
-* **Ordenar não é o mesmo que sincronizar**: dá para ter toda a audiência no **mesmo canal** ((\langle M\rangle=1)) mas com **atrasos/defasagens** entre casas ((\langle\sigma\rangle>0)). Analogamente, em física da matéria condensada, ordem magnética **não** implica necessariamente **fase** temporizada em osciladores.
+* **Ordenar não é o mesmo que sincronizar**: dá para ter toda a audiência no **mesmo canal** $\langle M\rangle=1$ mas com **atrasos/defasagens** entre casas $(\langle\sigma\rangle>0)$. 
+Analogamente, em física da matéria condensada, ordem magnética **não** implica necessariamente **fase** temporizada em osciladores.
+Sincroniza tem a ver com todos seguirem o mesmo mapa quando o tempo é levado a infinito
 * **Por que a persistência satura com acoplamento global?** Porque a “decisão” não depende de bordas entre vizinhos (que moveriam aos poucos), mas sim de uma **força centralizada**; cedo cada casa “decide” se troca ou não — e depois **não há motivo** para des‑trocar.
 * **Majoritarismo inicial**: com assimetria inicial, o campo médio reforça a **maioria** (curva de feedback positivo). Em termos de TV: um canal que já começa liderando tende a **consolidar** audiência quando a manchete pesa (ε moderado).
 
 
----
 
-* **Figura 1** (mapa de regimes): sobrepor **fronteiras teóricas** ((1-\varepsilon)|\mu|=1) e **escape** ((1-\varepsilon)\mu=\pm3) aos **pontos simulados** (\langle\sigma\rangle\lessgtr 10^{-7}).
-* **Figura 2**: (p_t) vs. *t* para ε representativos (abaixo de ε₁; dentro de (ε₁,ε₂); acima de ε₂).
-* **Figura 3**: (p_\infty), (\langle\sigma\rangle), (\langle M\rangle) vs. ε (destacar os **patamares de (p_\infty)**).
-* **Figura 4**: histogramas (\rho(x)) no regime assintótico para ε característicos.
-* **Figura 5**: trajetórias (x_i^t) de amostras representativas (uma que nunca troca, uma que troca e sincroniza, etc.).
+### Apêndice — detalhes que economizam depuração
 
-
----
-
-## 10. Apêndice — detalhes que economizam depuração
-
-* **Cálculo de (I_\pm)**: (I_\pm=[\pm\mu(2-\mu)/3,;\pm\mu/3]) para (1<\mu<2). Úteis para inicialização e para checar convergência de histogramas.
-* **Estimando (ε_1, ε_2)**: faça varreduras finas em ε e procure **saltos** em (\langle M\rangle) e **patamares** em (p_\infty). Marque também onde (\langle\sigma\rangle\to0) (síncrono) vs. (>0) (dessíncrono).
+* **Cálculo de $I_\pm$**: $I_\pm=[\pm\mu(2-\mu)/3;\pm\mu/3]$ para $1<\mu<2$. 
+Úteis para inicialização e para checar convergência de histogramas.
+* **Estimando $\varepsilon_1, \varepsilon_2$**: fazer varreduras finas em $\varepsilon$ e procure **saltos** em $\langle M\rangle$ e **patamares** em 
+$p_\infty$. Marque também onde $\langle\sigma\rangle\to 0$ (síncrono) vs. (>0) (dessíncrono).
 * **Sementes e reprodutibilidade**: fixe `np.random.seed` e logue condições iniciais (frações por atrator).
 
+
+
 ---
-
-> **Moral da história (TV Edition)**: o **ganho local** (\mu) decide se cada televisor é calmo ou zapeador; o **peso da manchete** ε decide se **a audiência converge** (e como). O espetáculo coletivo pode dar **saltos**, e o caminho até lá fica impresso em **quem precisou trocar de canal** ((p_\infty)).
-
 
 ## Mapa mental (visão geral)
 
@@ -258,8 +250,8 @@ graph LR
   C --> C2["**Persistência** $p_t$ e $p_\infty$"]
   C --> C3["Magnetização $M_t$ e |M|"]
   A --> E[Fronteiras analíticas]
-  E --> E1["(1-$xi$)|$\mu$| = ±1  → sincronização"]
-  E --> E2["(1-$\xi$) $\mu$ = ±3 → escape"]
+  E --> E1["(1-ε)|$\mu$| = ±1  → sincronização"]
+  E --> E2["(1-ε) $\mu$ = ±3 → escape"]
   A --> F[Estados coletivos]
   F --> F1[desordenado]
   F --> F2[ordenado dessíncrono]
@@ -269,47 +261,6 @@ graph LR
 
 ---
 
-## Modelo matemático
-
-### Atualização com acoplamento global
-
-
-$$x_i^{t+1} = (1-\varepsilon)f(x_i^{t}) + \frac{\varepsilon}{N}\sum_{j=1}^{N} f(x_j^{t}),\quad i=1\dots N$$
-
-* $x_i^t \in [-1,1]$, $\varepsilon$ é o acoplamento; o termo da soma é o **campo médio** de f. 
- 
-O que é o mapa global: Como podemos ver cada $x_i$ em $t+1$ depende de todos os outros $x^t$. Podemos interpretar isso
-como um mapa que está todo conectado e que todas apartícuals influênciam umas as outras, ou seja, um acoplamento global.
-Geralmente tratamos de casos locais: Só os primeiros vizinhos influenciam o próximo passo. Nesse caso estamos fazendo justamente
-o contrário, todo mundo influencia todo mundo.
-
-### Mapa local (odd, linear por partes)
-
-$$f(x;\mu) =
-\begin{cases}
--\tfrac{2\mu}{3} - \mu x & x\in[-1,-\tfrac{1}{3}]\\
-\mu x & x\in[-\tfrac{1}{3}\tfrac{1}{3}]\\
-\tfrac{2\mu}{3} - \mu x & x\in[\tfrac{1}{3},1].
-\end{cases}$$
-
-* Parâmetro local: $\mu\in[-3,3]$.
-* **Regiões:**
-
-  * $(|\mu|\le 1)$: ponto fixo estável em 0.
-  * $(1<\mu<2)$: **caótico e biestável**; dois atratores caóticos simétricos em
-    $I_\pm = [\pm\mu(2-\mu)/3,, \pm\mu/3]$.
-  * Em mapas lineares por partes, $|f'|=|\mu|$ em cada ramo ⇒ **Lyapunov local** $\lambda=\ln|\mu|$ (quando em regime caótico).
-
-### Fronteiras analíticas (sincronização e escape)
-
-* Da análise linear em torno do estado sincronizado:
-  $$(1-\varepsilon)e^{\lambda} = \pm 1 \Rightarrow (1-\varepsilon)|\mu| = \pm 1$$
-
-  * Para $\mu=1.9$: $\varepsilon_{\text{sync,inf}} \approx 0.473$, $\varepsilon_{\text{sync,sup}} \approx 1.526$.
-* **Escape** do intervalo [-1,1]:
-  $$(1-\varepsilon)\mu = \pm 3.$$
-
----
 
 ## Quantidades coletivas (observáveis)
 
@@ -320,12 +271,12 @@ $$f(x;\mu) =
   **Persistência**: $p_t$ = fração de mapas cujo **sinal não mudou** desde t=0. O valor de saturação $p_\infty$ **depende de $\varepsilon$** e distingue realizações do estado ordenado.
 * **Magnetização**: $M_t = \tfrac{1}{N}\sum_i s_i^t$; usamos $|\langle M\rangle|$ como parâmetro de ordem (assintótico, após descartar transientes).
 
-**Cenários típicos $\mu \approx 1.9$:**
+**Cenários típicos feitos no artigo $\mu \approx 1.9$:**
 
-* $\varepsilon < \varepsilon_1$: fase **não ordenada**, $|\langle M\rangle|=0$, $p_\infty=1$ (spins congelam nas bacias iniciais).
+* $\varepsilon < \varepsilon_1$: fase **não ordenada**, $|\langle M\rangle|=0$, $p_\infty \approx 1$ (spins congelam nas bacias iniciais).
 * $\varepsilon_1 < \varepsilon < 1$: **ordenado dessíncrono**, $|\langle M\rangle|=1$, $\langle\sigma\rangle>0$, $p_\infty\approx 0.5$.
 * $1 < \varepsilon < \varepsilon_{\text{sync,sup}}$: **ordenado síncrono**, $|\langle M\rangle|=1$, $\langle\sigma\rangle\approx 0$, $p_\infty\approx 0.5$.
-* $\varepsilon > 1$: transição descontínua p/ **turbulento** (no artigo, marca‑se um salto adicional e $|\langle M\rangle|\to 0$ em faixa).
+* $\varepsilon > 1$ e $|\mu|$ grande: transição descontínua p/ **turbulento** (no artigo, marca‑se um salto adicional e $|\langle M\rangle|\to 0$ em faixa).
 
 > Observação: valores críticos exatos dependem de $\mu$; usaremos $\mu=1.9$ para reproduzir as figuras do artigo.
 
@@ -341,6 +292,21 @@ Parâmetros padrão p/ testes rápidos:
 * $\mu=1.9$; $\varepsilon$ em malha fina englobando as fronteiras analíticas.
 * **ICs (bistáveis)**: metade dos mapas com amostras uniformes em $I_+$, metade em $I_-$, com sinais misturados aleatoriamente.
 * Transientes: descartar $T_{\text{burn}}$ (e.g., 10^3–10^4), depois medir $\langle\sigma\rangle$.
+
+
+Ideias para reproduzir de figuras
+
+
+Figuras de $x_i(t)$ que mostrem o caos.
+ 
+* **Figura 1** (mapa de regimes): sobrepor **fronteiras teóricas** ((1-\varepsilon)|\mu|=1) e **escape** ((1-\varepsilon)\mu=\pm3) aos **pontos simulados** $\langle\sigma\rangle\lessgtr 10^{-7}$.
+* **Figura 2**: (p_t) vs. *t* para ε representativos (abaixo de ε₁; dentro de (ε₁,ε₂); acima de ε₂).
+* **Figura 3**: (p_\infty), (\langle\sigma\rangle), (\langle M\rangle) vs. ε (destacar os **patamares de (p_\infty)**).
+* **Figura 4**: histogramas (\rho(x)) no regime assintótico para ε característicos.
+* **Figura 5**: trajetórias $x_i^t$ de amostras representativas (uma que nunca troca, uma que troca e sincroniza, etc.).
+
+
+---
 
 ---
 
