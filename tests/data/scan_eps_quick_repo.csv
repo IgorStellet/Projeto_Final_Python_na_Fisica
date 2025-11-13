@@ -1,0 +1,8 @@
+# mu=1.9, N=256, T_burn=400, T_meas=400, init=half_half, seed_base=314, tol_sync=1e-07
+eps,sigma_mean,escaped_frac,is_synced,mu,N,T_burn,T_meas,init,seed_base,tol_sync
+0.2,0.3954254655,0,0
+0.4,0.04661772585,0,0
+0.6,4.198030812e-17,0,1
+0.8,3.677613769e-17,0,1
+1,3.309852392e-17,0,1
+1.2,2.855354841e-17,0,1
