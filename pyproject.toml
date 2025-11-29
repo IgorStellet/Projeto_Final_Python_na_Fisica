@@ -33,11 +33,3 @@ dev = [
   "ipykernel>=6.29"
 ]
 
-[tool.pytest.ini_options]
-minversion = "8.0"
-addopts = "-ra"
-testpaths = ["tests"]
-
-[tool.coverage.run]
-source = ["gcm"]
-branch = true
